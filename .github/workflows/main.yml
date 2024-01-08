@@ -1,5 +1,8 @@
+name: Build Core ohb
 on:
-  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   version:
@@ -88,4 +91,3 @@ jobs:
           path: |
             sing-box
         
-          
