@@ -22,7 +22,14 @@ jobs:
         uses: actions/setup-go@v4.1.0
         with:
           go-version: 1.21.5
-
+          
+      - name: checkout sing repository
+        uses: actions/checkout@v4.1.1
+        with:
+          ref: building
+          path: sing
+          repository: vuong2023/sing-box
+          
       - name: get sing-box version
         id: version
         run: |
@@ -72,9 +79,9 @@ jobs:
       - name: checkout sing repository
         uses: actions/checkout@v4.1.1
         with:
-          ref: fix-interface
+          ref: building
           path: sing
-          repository: PuerNya/sing
+          repository: vuong2023/sing-box
 
       - name: replace sing
         run: |
