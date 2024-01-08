@@ -30,7 +30,7 @@ jobs:
           ref: building
       - name: delete tag
         run: |
-         cd /home/runner/work/sing-make-vn/sing-make-vn
+         cd /home/runner/work/sing-test/test
          git tag -d $(git tag -l)
           
       - name: get sing-box version
