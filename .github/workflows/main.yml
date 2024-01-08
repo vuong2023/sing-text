@@ -33,9 +33,8 @@ jobs:
           fetch-depth: 0
           repository: vuong2023/sing-box
           ref: building             
-      - name: delete tag
+      - name: go version
         run: |
-         cd /home/runner/work/sing-test/sing-test
          version=$(CGO_ENABLED=0 go run ./cmd/internal/read_tag)
          echo version=$version >> $GITHUB_OUTPUT
          git tag -d $(git tag -l)
