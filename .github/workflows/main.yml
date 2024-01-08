@@ -23,12 +23,15 @@ jobs:
         with:
           go-version: 1.21.5
           
-      - name: checkout sing repository
-        uses: actions/checkout@v4.1.1
+      - uses: actions/checkout@v4
         with:
-          ref: building
-          path: sing
+          fetch-depth: 0
           repository: vuong2023/sing-box
+          ref: building
+      - name: delete tag
+        run: |
+         cd /home/runner/work/sing-make-vn/sing-make-vn
+         git tag -d $(git tag -l)
           
       - name: get sing-box version
         id: version
