@@ -38,7 +38,7 @@ jobs:
           ref: building             
       - name: go version
         run: |
-         cd /home/runner/work/sing-box-build/sing-box-build
+         cd /home/runner/work/sing-text/sing-text
          git tag -d $(git tag -l)
   build-android:
     runs-on: ubuntu-latest
